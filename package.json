@@ -3,6 +3,10 @@
   "version": "0.63.1",
   "description": "Set of UI components for ramaera projects",
   "main": "src/index.ts",
+
+  "files": [
+    "dist"
+  ],
   "sideEffects": [
     "*.css.ts"
   ],
@@ -19,12 +23,9 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "test": "jest",
-    "build":"build-storybook -o dist",
+    "build": "build-storybook -o dist",
     "prepublishOnly": "yarn build"
   },
-
-
-
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
@@ -54,6 +55,7 @@
     "react-is": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.70.1",
+    "semantic-release": "^19.0.5",
     "styled-components": "^5.3.3",
     "themeprovider-storybook": "^1.7.2",
     "ts-jest": "^27.1.3",
@@ -85,5 +87,13 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }

@@ -13,9 +13,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "target": "es5",
+    
   },
   "types": ["vitest/globals"],
   "include": ["src"],
   "exclude": ["node_modules", "src/**/*.stories.tsx"]
+
 }
